@@ -13,6 +13,7 @@
   --backraund-btn-hover-color: #404bbf;
   --backraund-buttons-team: #f4f4fd;
   --footer-text-color: #e7e9fc;
+  --footer-color-media: #31d0aa;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -110,6 +111,15 @@ button {
   background: var(--main-title-color);
   padding-top: 188px;
   padding-bottom: 188px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people.jpg);
+  flex-grow: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -216,6 +226,17 @@ button {
   flex-wrap: wrap;
   margin-right: 24px;
 }
+.advantages-items {
+  width: 100%;
+  height: 100%;
+  background-color: var(--backraund-buttons-team);
+  width: 264px;
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 8px;
+}
+
 .caption {
   font-weight: 500;
   font-size: 20px;
@@ -269,6 +290,30 @@ button {
   text-align: center;
 }
 
+.social-list-employees {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 8px 16px 32px 16px;
+}
+
+.employees {
+  width: 40px;
+  height: 40px;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--focused-color);
+}
+.social-link:is(:hover, :focus) {
+  background-color: var(--backraund-btn-hover-color);
+}
+
 /* ----- */
 
 .services-item {
@@ -284,6 +329,13 @@ button {
   background: var(--main-title-color);
   padding-top: 100px;
   padding-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+.web-footer {
+  width: 264px;
+  margin-right: 120px;
 }
 .logo-footer {
   font-family: 'Raleway', sans-serif;
@@ -300,7 +352,6 @@ button {
 }
 
 .text-footer {
-  width: 264px;
   font-size: 16px;
   line-height: 1.5;
   color: var(--footer-text-color);
@@ -308,4 +359,36 @@ button {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+}
+.social-media {
+  width: 208px;
+}
+.text-footer-media {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--footer-text-color);
+  margin-bottom: 16px;
+}
+.footer-items {
+  display: inline-flex;
+}
+.social-link-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.social-link-footer:is(:hover, :focus) {
+  background-color: var(--footer-color-media);
+}
+
+.social-list-footer {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }
